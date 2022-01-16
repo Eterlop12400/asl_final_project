@@ -1,0 +1,8 @@
+{% extends 'layouts/_default.twig' %}
+
+{% block main_content %}
+    <p>
+        <a href="/questions">View All Questions</a>
+    </p>
+    {% include 'question/_form.twig' with { question: question } %}
+{% endblock %}

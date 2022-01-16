@@ -1,0 +1,8 @@
+{% extends 'layouts/_default.twig' %}
+
+{% block main_content %}
+    <p>
+        <a href="/choices">View All Choices</a>
+    </p>
+    {% include 'choice/_form.twig' with { choice: choice } %}
+{% endblock %}

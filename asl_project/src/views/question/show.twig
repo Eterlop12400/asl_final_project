@@ -1,0 +1,17 @@
+{% extends 'layouts/_default.twig' %}
+
+{% block main_content %}
+    <p>
+        <a href="/questions">View All Questions</a>
+    </p>
+    <div>
+        <h1>{{ question.question }}</h1>
+        <p><strong>ID: {{ question.id }}</strong></p>
+        <p><strong>Quiz ID: {{ question.quizId }}</strong></p>
+        <p><strong>Created At: {{ question.createdAt }}</strong></p>
+        <p><strong>Updated Last: {{ question.updatedAt }}</strong></p>
+        <p>
+            <a href="/questions/{{ question.id }}/delete">Delete</a>
+        </p>
+    </div>
+{% endblock %}

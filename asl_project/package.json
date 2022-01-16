@@ -1,0 +1,29 @@
+{
+  "name": "asl_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "(cd my-app && npm run start) & nodemon -e js,twig --watch index.js --watch src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "express-session": "^1.17.2",
+    "mysql2": "^2.3.3",
+    "querystring": "^0.2.1",
+    "request": "^2.88.2",
+    "sequelize": "^6.12.5",
+    "twig": "^1.15.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "sequelize-cli": "^6.3.0"
+  }
+}
