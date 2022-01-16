@@ -27,7 +27,7 @@ app.use(session({
 app.set('views', __dirname + '/src/views')
 app.set('view engine', 'twig')
 
-// We this so that express can respond to preflight requests.
+// This is so that express can respond to preflight requests.
 app.use(cors({
     "origin": "*",
     "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
