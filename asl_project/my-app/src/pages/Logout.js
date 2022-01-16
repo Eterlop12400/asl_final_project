@@ -6,6 +6,9 @@ function Logout() {
         // Deleting our token in our local storage, making the user log in again with oAuth.
         localStorage.removeItem('token');
 
+        // Hiding view all quizzes link since the user is being logged out on this page.
+        document.querySelector('.link-decoration-home').style.visibility = 'hidden';
+
         // Setting a timer for 1.5 sec then reloading the page which will take them bacj to <Login />.
         setInterval(() => {
             window.location.reload();
