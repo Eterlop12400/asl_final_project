@@ -101,6 +101,7 @@ const styles = {
     },
     label: {
         paddingLeft: '10px',
+        cursor: 'pointer',
     }
 }
 
