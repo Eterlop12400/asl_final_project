@@ -41,7 +41,7 @@ const Quiz = () => {
                                     <li>
                                         {/* This will loop over each of our choices in each question */}
                                         {question.Choices.map(choice => (
-                                            <div className='choice-container' key={choice.id}>
+                                            <div className='choice-container' key={choice.id} onClick={selectOption}>
                                                 <input type="radio" name={'question_' + question.id} required />
                                                 <label style={styles.label}>{choice.label}</label>
                                             </div>
@@ -72,6 +72,11 @@ const Quiz = () => {
         } else { // If the form comes back false we want to show the user the error.
             form.reportValidity();
         }
+    }
+
+    // This function will allow user's to click on the container to select an option rather than having to select the radio button directly.
+    function selectOption(e) {
+        e.target.children[0].checked = true;
     }
 }
 
