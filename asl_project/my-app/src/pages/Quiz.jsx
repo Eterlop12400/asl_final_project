@@ -43,7 +43,7 @@ const Quiz = () => {
                                         {question.Choices.map(choice => (
                                             <div className='choice-container' key={choice.id} onClick={selectOption}>
                                                 <input type="radio" name={'question_' + question.id} required />
-                                                <label style={styles.label}>{choice.label}</label>
+                                                <label style={styles.label} onClick={selectOption}>{choice.label}</label>
                                             </div>
                                         ))}
                                     </li>
@@ -76,7 +76,11 @@ const Quiz = () => {
 
     // This function will allow user's to click on the container to select an option rather than having to select the radio button directly.
     function selectOption(e) {
-        e.target.children[0].checked = true;
+        if (e.target.className === "choice-container") {
+            e.target.children[0].checked = true;
+        } else {
+            e.target.closest('.choice-container').children[0].checked = true;
+        }
     }
 }
 
