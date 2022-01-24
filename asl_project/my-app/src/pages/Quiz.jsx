@@ -76,11 +76,7 @@ const Quiz = () => {
 
     // This function will allow user's to click on the container to select an option rather than having to select the radio button directly.
     function selectOption(e) {
-        if (e.target.className === "choice-container") {
-            e.target.children[0].checked = true;
-        } else {
             e.target.closest('.choice-container').children[0].checked = true;
-        }
     }
 }
 
